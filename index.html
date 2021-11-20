@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Crypto Conversions</title>
+</head>
+<body>
+	<form>
+		<label for="crypto">Crypto</label>
+		<select name="crypto" id="crypto">
+			<option value="BTC">BTC</option>
+			<option value="satoshi">Satoshi (fractional BTC)</option>
+			<option value="ETH">ETH</option>
+			<option value="wei">Wei (fractional ETH)</option>
+			<option value="gwei">Gwei (fractional ETH)</option>
+			<option value="BNB">BNB</option>
+			<option value="SOL">SOL</option>
+			<option value="ADA">ADA</option>
+			<option value="XRP">XRP</option>
+			<option value="DOT">DOT</option>
+			<option value="DOGE">DOGE</option>
+			<option value="SHIB">SHIB</option>
+			<option value="AVAX">AVAX</option>
+			<option value="LUNA">LUNA</option>
+			<option value="LTC">LTC</option>
+			<option value="CRO">CRO</option>
+			<option value="UNI">UNI</option>
+			<option value="LINK">LINK</option>
+			<option value="ALGO">ALGO</option>
+		</select>
+
+		<br><br>
+
+		<label for="input">USD</label>
+		<input type="number" id="input" name="input">
+
+		<label for="output">Output</label>
+		<input type="number" id="output" name="output" disabled>
+	</form>
+
+	<br>
+	<p>Prices are updated every page refresh</p>
+
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="/script.js"></script>
+
+</body>
+</html>
