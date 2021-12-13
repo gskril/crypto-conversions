@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }} Live Price Conversion</title>
+</head>
+<body>
+	<form id="conversion-list">
+		<label for="crypto">Crypto</label>
+		{% include "../../_includes/partials/dropdown.njk" %}
+	</form>
+
+	<br>
+	<p>Prices are updated every time the page is refreshed.</p>
+
+	<h3>Explore others</h3>
+	<a href="/">Home</a><br>
+	{% for conversion in collections.conversions %}
+		<a href="{{ conversion.url | url }}">{{ conversion.data.title }}</a> <br>
+	{% endfor %}
+
+	<script src="/assets/js/axios.min.js"></script>
+	<script src="/assets/js/script.js"></script>
+
+	<script>
+		const crypto = '{{ selection }}'
+		document.querySelector(`#crypto > option[value='${crypto}']`).setAttribute('selected', '')
+		document.querySelector('#conversion-list > label').style.display = 'none'
+		document.querySelector('#conversion-list > select').style.display = 'none'
+	</script>
+
+</body>
+</html>

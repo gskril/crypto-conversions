@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 			outputLabel.innerHTML = "Satoshis"
 			output.value = input.value * 100000000
 		} else {
-			inputLabel.innerHTML = "USD"
-			outputLabel.innerHTML = selected
+			inputLabel.innerHTML = selected
+			outputLabel.innerHTML = "USD"
 			output.value = (data[selected].USD * input.value).toFixed(2)
 		}
 	}

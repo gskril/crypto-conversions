@@ -1,0 +1,4 @@
+{
+	"layout": "templates/conversion.njk",
+	"tags": "conversions"
+}
