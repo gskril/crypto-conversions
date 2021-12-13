@@ -22,9 +22,9 @@
 		</select>
 
 		<div style="display: block; margin-top: 1rem;">
-			<label for="input">Input</label>
+			<label for="input">{% if title %} {{ title.split(' ')[0] }} {% else %} Input {% endif %}</label>
 			<input type="number" id="input" name="input">
 
-			<label for="output">Output</label>
+			<label for="output">{% if title %} {{ title.split(' ')[2] }} {% else %} Output {% endif %}</label>
 			<input type="number" id="output" name="output" disabled>
 		</div>
